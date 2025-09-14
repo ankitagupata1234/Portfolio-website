@@ -1,0 +1,71 @@
+
+/* Teal + Navy + White Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+:root{
+  --navy:#1b263b;
+  --teal:#00bfa6;
+  --accent:#00c6ff;
+  --bg:#f8fafb;
+  --card:#ffffff;
+  --muted:#6c757d;
+}
+*{box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:var(--bg);margin:0;color:#122;line-height:1.6;}
+a{color:var(--navy);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Navbar */
+.navbar{background:var(--navy);box-shadow:0 3px 10px rgba(2,6,23,0.2)}
+.navbar .navbar-brand{color:#fff;font-weight:700}
+.navbar .nav-link{color:rgba(255,255,255,0.9);margin-left:0.6rem}
+.navbar .nav-link:hover{color:var(--teal)}
+
+/* Hero */
+.hero{height:78vh;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg, rgba(27,38,59,0.85), rgba(0,191,166,0.05)), url('https://source.unsplash.com/1600x900/?workspace,code') no-repeat center/cover;
+  color:#fff;text-align:center;padding:3rem 1rem;
+}
+.hero h1{font-size:2.6rem;margin-bottom:0.5rem}
+.hero p{max-width:760px;margin:0 auto 1.2rem;color:rgba(255,255,255,0.9)}
+
+/* Buttons */
+.btn-gradient{background:linear-gradient(45deg,var(--teal),var(--navy));color:#fff;padding:10px 26px;border-radius:28px;border:none;font-weight:600;transition:transform .18s,box-shadow .18s}
+.btn-gradient:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,191,166,0.15)}
+
+/* Sections */
+.section{padding:4rem 1rem}
+.section.bg-light{background:#ffffff}
+
+/* Section Title */
+.section-title{font-weight:700;color:var(--navy);font-size:1.6rem;display:inline-block;border-bottom:3px solid var(--teal);padding-bottom:6px;margin-bottom:1.2rem}
+
+/* Cards */
+.row.g-4{gap:1.2rem}
+.custom-card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 8px 22px rgba(2,6,23,0.06);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.custom-card h5{margin-bottom:8px;color:var(--navy)}
+.custom-card p{color:var(--muted);margin-bottom:12px}
+.custom-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(2,6,23,0.09)}
+
+/* Skill overlay (for hover) */
+.skill-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,191,166,0.95), rgba(27,38,59,0.95));color:#fff;display:flex;align-items:center;justify-content:center;padding:16px;text-align:center;opacity:0;transition:opacity .28s}
+.custom-card:hover .skill-overlay{opacity:1}
+
+/* Project buttons */
+.project-actions{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center}
+
+/* Contact card */
+.contact-card{max-width:700px;margin:0 auto;padding:22px;border-radius:12px;background:#fff;box-shadow:0 12px 30px rgba(2,6,23,0.07)}
+
+/* Footer */
+.footer{background:var(--navy);color:#fff;padding:18px 1rem;text-align:center}
+.footer a{color:var(--teal);font-weight:600}
+
+/* Responsive */
+@media (min-width:992px){
+  .hero h1{font-size:3.2rem}
+  .hero p{font-size:1.05rem}
+}
+@media (max-width:575px){
+  .hero{height:auto;padding:4rem 1rem}
+  .hero h1{font-size:1.8rem}
+}
